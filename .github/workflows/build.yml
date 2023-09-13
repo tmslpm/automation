@@ -14,4 +14,4 @@ jobs:
         run: |
           npm install
           npm run build 
-          echo "github action end"
+          node src/main.ts

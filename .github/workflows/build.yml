@@ -1,0 +1,17 @@
+name: build
+run-name: ${{ github.actor }} - build
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.7.0"
+          cache: "npm"
+      - name: "[npm]: Install dependencies and build"
+        run: |
+          npm install
+          npm build 
+          echo "github action end"

@@ -8,8 +8,8 @@ Sample code for automation
  
 |  |  |
 |--|--|
-| 🚀 | [/folder structure](#) |
-| 🚀 | [/about billing for GitHub Actions](#) |
+| 🚀 | [/folder structure](#folder-structure) |
+| 🚀 | [/about billing for GitHub Actions](#about-billing-for-github-actions) |
 
 ### Folder structure:
 ```
@@ -48,3 +48,7 @@ Sample code for automation
 [source: docs.github.com](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)
 
 </div> 
+
+<pre align=center>
+    ↑↑↑ <a href="#automation" title="click to scroll up" alt="click to scroll up">BACK TO TOP</a> ↑↑↑
+</pre>

@@ -27,6 +27,9 @@ Sample code for automation
 │
 ├── 📂src
 │   ├── ... script/code source typescript
+│
+├── 📂assets
+│   ├── ... image, diagrame ...
 │  
 ├── ...
 │

@@ -18,19 +18,18 @@ Sample code for automation
 ├── 📂.github/workflows
 │   ├── ... github action script file ...
 │
-├── 📂build
-│   ├── 📂dist
-│   │   ├── ... build file ...
+├── 📂src
+│   ├── 📂assets
+│   │   ├── ... image, data, template ...
 │   │
-│   ├── 📂tmp
-│   │   ├── ... temp file ...
+│   ├── 📂tasks
+│   │   ├── ... all script tasks ...
+│   │
+│   ├── main.ts
 │
 ├── 📂src
 │   ├── ... script/code source typescript
-│
-├── 📂assets
-│   ├── ... image, diagrame ...
-│  
+│ 
 ├── ...
 │
 └── package.json (NPM)

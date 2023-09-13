@@ -32,9 +32,15 @@ Sample code for automation
 └── package.json (NPM)
 ``` 
 
+-----------------
+<pre align=center>↑↑↑ <a href="#automation" title="click to scroll up" alt="click to scroll up">BACK TO TOP</a> ↑↑↑</pre>
+
 ### About billing for GitHub Actions
 
 > GitHub Actions usage is free for standard GitHub-hosted runners in public repositories, and for self-hosted runners. For private repositories, each GitHub account receives a certain amount of free minutes and storage for use with GitHub-hosted runners, depending on the account's plan. Any usage beyond the included amounts is controlled by spending limits.
+
+-----------------
+<pre align=center>↑↑↑ <a href="#automation" title="click to scroll up" alt="click to scroll up">BACK TO TOP</a> ↑↑↑</pre>
 
 <div align=center> 
 
@@ -49,6 +55,5 @@ Sample code for automation
 
 </div> 
 
-<pre align=center>
-    ↑↑↑ <a href="#automation" title="click to scroll up" alt="click to scroll up">BACK TO TOP</a> ↑↑↑
-</pre>
+-----------------
+<pre align=center>↑↑↑ <a href="#automation" title="click to scroll up" alt="click to scroll up">BACK TO TOP</a> ↑↑↑</pre>

@@ -1,9 +1,65 @@
-<mxfile host="app.diagrams.net" modified="2023-09-13T21:34:50.703Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="0YfvbRz4ym5aVyFealLB" version="21.7.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-13T22:40:56.360Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="cDVK0SmXL_cUGpgGsIqv" version="21.7.5" type="github">
   <diagram name="Page-1" id="5wvJt9Ujv5uZ9KLNfujQ">
     <mxGraphModel dx="1050" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-63" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#1C59FF;strokeWidth=3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fontColor=default;endArrow=classic;fillColor=#d5e8d4;" edge="1" parent="1" source="ioTSwYhna4YaXzBZb-bm-1" target="ioTSwYhna4YaXzBZb-bm-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-1" value="start" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fillColor=none;strokeColor=#82b366;strokeWidth=3;rounded=0;fillStyle=dashed;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-11" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="40" y="584.5" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-9" value="" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;rotation=-180;rounded=0;shadow=0;hachureGap=4;fillStyle=dashed;strokeColor=#b85450;strokeWidth=3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fillColor=none;horizontal=1;verticalAlign=middle;" vertex="1" parent="ioTSwYhna4YaXzBZb-bm-11">
+          <mxGeometry width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-10" value="end" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Architects Daughter;fontColor=default;" vertex="1" parent="ioTSwYhna4YaXzBZb-bm-11">
+          <mxGeometry x="104.99957575757576" y="4.999090909090908" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-45" value="execute script&amp;nbsp;&lt;font style=&quot;border-color: var(--border-color); text-align: left;&quot; color=&quot;#ffb570&quot;&gt;&quot;/src/main.ts&quot;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;hachureGap=4;fillStyle=dashed;strokeColor=#1C59FF;strokeWidth=3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-68" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#1C59FF;strokeWidth=3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fontColor=default;endArrow=classic;fillColor=#dae8fc;" edge="1" parent="1" source="ioTSwYhna4YaXzBZb-bm-47" target="ioTSwYhna4YaXzBZb-bm-50">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="308" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-47" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;generate object for each automation&lt;/font&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;hachureGap=4;fillStyle=dashed;strokeColor=#1C59FF;strokeWidth=3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-56" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#1C59FF;strokeWidth=3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fontColor=default;endArrow=classic;fillColor=#d5e8d4;" edge="1" parent="1" source="ioTSwYhna4YaXzBZb-bm-50" target="ioTSwYhna4YaXzBZb-bm-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-66" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#1C59FF;strokeWidth=3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fontColor=default;endArrow=classic;fillColor=#d5e8d4;" edge="1" parent="1" source="ioTSwYhna4YaXzBZb-bm-50">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-50" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;iterate on each object&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=37;shadow=0;hachureGap=4;fillStyle=dashed;strokeColor=#1C59FF;strokeWidth=3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="280" width="290" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-57" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#1C59FF;strokeWidth=3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fontColor=default;endArrow=classic;fillColor=#d5e8d4;" edge="1" parent="1" source="ioTSwYhna4YaXzBZb-bm-52" target="ioTSwYhna4YaXzBZb-bm-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-52" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;create bash file for run this automation with &lt;b&gt;NPM&lt;/b&gt; and &lt;b&gt;node-ts&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;hachureGap=4;fillStyle=dashed;strokeColor=#1C59FF;strokeWidth=3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="420" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-67" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=#1C59FF;strokeWidth=3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fontColor=default;endArrow=classic;fillColor=#d5e8d4;" edge="1" parent="1" source="ioTSwYhna4YaXzBZb-bm-53" target="ioTSwYhna4YaXzBZb-bm-50">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="525" />
+              <mxPoint x="560" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ioTSwYhna4YaXzBZb-bm-53" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;create YAML Github action file&lt;br&gt;&lt;/span&gt;for call the bash&amp;nbsp;in the future" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;hachureGap=4;fillStyle=dashed;strokeColor=#1C59FF;strokeWidth=3;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="500" width="290" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

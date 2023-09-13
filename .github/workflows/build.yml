@@ -13,5 +13,5 @@ jobs:
       - name: "[npm]: Install dependencies and build"
         run: |
           npm install
-          npm build 
+          npm run build 
           echo "github action end"

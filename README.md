@@ -11,7 +11,8 @@ Sample code for automation
 | 🚀 | [/folder structure](#folder-structure) |
 | 🚀 | [/about billing for GitHub Actions](#about-billing-for-github-actions) |
 
-### Folder structure:
+### Folder structure
+
 ```
 📂/. 
 ├── 📂.github/workflows
@@ -39,9 +40,6 @@ Sample code for automation
 
 > GitHub Actions usage is free for standard GitHub-hosted runners in public repositories, and for self-hosted runners. For private repositories, each GitHub account receives a certain amount of free minutes and storage for use with GitHub-hosted runners, depending on the account's plan. Any usage beyond the included amounts is controlled by spending limits.
 
------------------
-<pre align=center>↑↑↑ <a href="#automation" title="click to scroll up" alt="click to scroll up">BACK TO TOP</a> ↑↑↑</pre>
-
 <div align=center> 
 
 | Plan       | Storage | Minutes per month |
@@ -53,7 +51,7 @@ Sample code for automation
 
 [source: docs.github.com](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)
 
-</div> 
+</div>
 
 -----------------
 <pre align=center>↑↑↑ <a href="#automation" title="click to scroll up" alt="click to scroll up">BACK TO TOP</a> ↑↑↑</pre>

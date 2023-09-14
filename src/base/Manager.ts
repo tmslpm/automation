@@ -3,7 +3,9 @@ import { ActionGithub } from "./ActionGithub";
 import fs from 'node:fs';
 import { pathResolve } from "./utils/File";
 
-
+/**
+ * Manager Class
+ */
 export class Manager {
     private static SINGLETON_INSTANCE: Manager | null = null;
     private readonly _registredAction: Map<string, IActionGithub>;

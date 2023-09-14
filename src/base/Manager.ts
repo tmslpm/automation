@@ -1,11 +1,8 @@
 import { IActionGithub } from "./IActionGithub";
 import { ActionGithub } from "./ActionGithub";
-import path from 'node:path';
-import os from 'node:os';
 import fs from 'node:fs';
+import { pathResolve } from "./utils/File";
 
-const IsWindows = os.type() === "Windows_NT";
-const PathResolve = (a: string, b: string): string => IsWindows ? path.resolve(a, b).replace(/\\/g, '/') : path.resolve(a, b);
 
 export class Manager {
     private static SINGLETON_INSTANCE: Manager | null = null;
@@ -30,18 +27,23 @@ export class Manager {
         return Manager.SINGLETON_INSTANCE;
     }
 
+    /**
+     * Get all folders in the "./src/tasks" folder, then generate all IActionGithub objects and save them in the hashmap
+     * 
+     * @return void 
+     */
     public build(): void {
         // Get all file/folder in folder src/tasks, apply filter for get only directory
-        fs.readdirSync(PathResolve(__dirname, "../tasks"), { withFileTypes: true })
+        fs.readdirSync(pathResolve(__dirname, "../tasks"), { withFileTypes: true })
             .filter(dir => dir.isDirectory())
             .map(dir => {
                 // resolve tasks path
-                let taskPath = PathResolve(dir.path, dir.name);
+                let taskPath = pathResolve(dir.path, dir.name);
                 try {
-                    let pathTask = PathResolve(taskPath, "config.json");
+                    let pathTask = pathResolve(taskPath, "config.json");
                     if (fs.existsSync(pathTask)) {
                         // try get config path
-                        let rawJSON = fs.readFileSync(PathResolve(taskPath, "config.json"), "utf-8");
+                        let rawJSON = fs.readFileSync(pathResolve(taskPath, "config.json"), "utf-8");
                         // try parse config.json
                         let parsedJSON: any = JSON.parse(rawJSON);
 

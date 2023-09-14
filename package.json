@@ -4,7 +4,9 @@
   "description": "Sample code for automation",
   "main": "index.js",
   "scripts": {
-    "build": "ts-node src/main.ts"
+    "build": "ts-node src/main.ts",
+    "build-doc": "typedoc src/main.ts",
+    "lint": "eslint -f unix \"src/**/*.{ts,tsx}\""
   },
   "keywords": [
     "automation"
@@ -12,8 +14,14 @@
   "author": "tmslpm",
   "license": "MIT",
   "devDependencies": {
+    "@microsoft/tsdoc": "^0.14.2",
     "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
+    "eslint-plugin-tsdoc": "^0.2.17",
     "ts-node": "^10.9.1",
+    "typedoc": "^0.25.1",
     "typescript": "^4.9.4"
   }
 }

@@ -1,0 +1,15 @@
+export enum RunnerImage {
+    WindowsServer2022_latest = "windows-latest",
+    WindowsServer2022 = "windows-2022",
+    WindowsServer2019 = "windows-2019",
+    Ubuntu_22_04_latest = "ubuntu-latest",
+    Ubuntu_22_04 = "ubuntu-22.04",
+    Ubuntu_20_04 = "ubuntu-20.04",
+    MacOS_13_Ventura = "macos-13",
+    MacOS_13_Ventura_xl = "macos-13-xl",
+    MacOS_12_Monterey_latest = "macos-latest",
+    MacOS_12_Monterey = "macos-12",
+    MacOS_12_Monterey_latest_xl = "macos-latest-xl",
+    MacOS_12_Monterey_xl = "macos-12-xl",
+    MacOS_11_Big_Sur = "macos-11",
+}

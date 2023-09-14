@@ -4,7 +4,7 @@
   "description": "Sample code for automation",
   "main": "index.js",
   "scripts": {
-    "build": "node src/main.ts"
+    "build": "ts-node src/main.ts"
   },
   "keywords": [
     "automation"

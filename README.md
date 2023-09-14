@@ -18,10 +18,7 @@ Sample code for automation
 ├── 📂.github/workflows
 │   ├── ... github action script file ...
 │
-├── 📂src
-│   ├── 📂assets
-│   │   ├── ... image, data, template ...
-│   │
+├── 📂src  
 │   ├── 📂tasks
 │   │   ├── ... all script tasks ...
 │   │

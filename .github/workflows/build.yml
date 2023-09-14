@@ -13,5 +13,5 @@ jobs:
       - name: "[npm]: Install dependencies and build"
         run: |
           npm install
-          npm run build 
-          node src/main.ts
+          npm run build
+          npm run build-docs

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "ts-node src/main.ts",
-    "build-doc": "typedoc src/main.ts",
+    "build-docs": "typedoc src/main.ts",
     "lint": "eslint -f unix \"src/**/*.{ts,tsx}\""
   },
   "keywords": [

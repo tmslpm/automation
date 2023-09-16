@@ -1,4 +1,4 @@
-# Automation
+# Automation 🚀
 
 Example of automation code
  

@@ -31,7 +31,7 @@ export class Manager {
      * So use the static get() method
      */
     private constructor() {
-        this.customActionConstructor = (id: string, name: string, description: string, trigger: string, nodeVersion: string) => new ActionGithub(id, name, description, trigger, nodeVersion);
+        this._lambdaConstructionAction = (id: string, name: string, description: string, trigger: string, nodeVersion: string) => new ActionGithub(id, name, description, trigger, nodeVersion);
     }
 
     /**
@@ -98,6 +98,7 @@ export class Manager {
      * 
      * ```ts
      * let m = Manager.get();
+     * 
      * m.customActionConstructor = (id: string, name: string, str: string, ev: string, node: string) => {
      *      return new ActionGithub(id, name, str, ev, node);
      * };

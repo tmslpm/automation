@@ -15,4 +15,5 @@ function test(a: string, b: string): number {
 
 Manager.get().build();
 
+// print message in console
 console.log(test("test", "banana"))

@@ -13,7 +13,7 @@ function test(a: string, b: string): number {
     return (a + b).length;
 }
 
-Manager.get().build();
+//Manager.get().build();
 
 // print message in console
 console.log(test("test", "banana"))

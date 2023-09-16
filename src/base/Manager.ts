@@ -11,7 +11,14 @@ export class Manager {
     private readonly _registredAction: Map<string, IActionGithub>;
     private _lambdaConstructionAction: (id: string, name: string, description: string, trigger: string, nodeVersion: string) => IActionGithub;
 
-    /** private constructor, use singleton getter: Manager.get() */
+    /**
+     * ## Constructor Manager Object
+     * 
+     * The constructor is private because the class uses a singleton design pattern,
+     * the goal is to restrict the instantiation of a class to a single object)
+     * 
+     * So use the static get() method
+     */
     private constructor() {
         /* private constructor, use singleton getter: Manager.get() */
         this._registredAction = new Map();
@@ -74,7 +81,9 @@ export class Manager {
 
 
     /**
-     * Setter, define custom lambda with your action constructor (class YourAction implements IActionGitHub { ... })
+     * Setter, 
+     * 
+     * define custom a lambda function with your action constructor (class YourAction implements IActionGitHub { ... })
      * 
      * @return void
      */

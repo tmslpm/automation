@@ -16,16 +16,12 @@
 <li><a href="../modules/base_Manager.html">base/Manager</a></li>
 <li><a href="base_Manager.Manager.html">Manager</a></li></ul>
 <h1>Class Manager</h1></div>
-<section class="tsd-panel tsd-comment">
-<div class="tsd-comment tsd-typography"><p>Manager Class</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
 <li><span class="target">Manager</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/d0345ad/src/base/Manager.ts#L9">base/Manager.ts:9</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/1b21e47/src/base/Manager.ts#L6">base/Manager.ts:6</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -38,7 +34,6 @@
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Properties</h3>
 <div class="tsd-index-list"><a href="base_Manager.Manager.html#_lambdaConstructionAction" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_lambda<wbr/>Construction<wbr/>Action</span></a>
-<a href="base_Manager.Manager.html#_registredAction" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_registred<wbr/>Action</span></a>
 <a href="base_Manager.Manager.html#SINGLETON_INSTANCE" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>SINGLETON_<wbr/>INSTANCE</span></a>
 </div></section>
 <section class="tsd-index-section">
@@ -57,12 +52,15 @@
 <ul class="tsd-signatures tsd-is-private">
 <li class="tsd-signature tsd-anchor-link" id="constructor.new_Manager"><span class="tsd-kind-constructor-signature">new <wbr/>Manager</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="base_Manager.Manager.html" class="tsd-signature-type tsd-kind-class">Manager</a><a href="#constructor.new_Manager" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>private constructor, use singleton getter: Manager.get()</p>
+<div class="tsd-comment tsd-typography"><p>Constructor Manager Object</p>
+<p>The constructor is private because the class uses a singleton design pattern,
+the goal is to restrict the instantiation of a class to a single object)</p>
+<p>So use the static get() method</p>
 </div>
 <h4 class="tsd-returns-title">Returns <a href="base_Manager.Manager.html" class="tsd-signature-type tsd-kind-class">Manager</a></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/d0345ad/src/base/Manager.ts#L15">base/Manager.ts:15</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/1b21e47/src/base/Manager.ts#L33">base/Manager.ts:33</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_lambdaConstructionAction" class="tsd-anchor"></a>
@@ -75,6 +73,11 @@
 <ul class="tsd-signatures">
 <li class="tsd-signature" id="_lambdaConstructionAction.__type.__type-1"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span>, <span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">description</span>, <span class="tsd-kind-parameter">trigger</span>, <span class="tsd-kind-parameter">nodeVersion</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/base_IActionGithub.IActionGithub.html" class="tsd-signature-type tsd-kind-interface">IActionGithub</a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>private field for store a custom lambda function with your action constructor.</p>
+<p>Call the setter manager.customActionConstructor and return your custom constructor (extended implementation from IactionGithub!)</p>
+<pre><code class="language-ts"><span class="hl-1">Manager</span><span class="hl-0">.</span><span class="hl-2">get</span><span class="hl-0">().</span><span class="hl-2">customActionConstructor</span><span class="hl-0"> = (</span><span class="hl-1">id</span><span class="hl-0">: </span><span class="hl-4">string</span><span class="hl-0">, </span><span class="hl-1">name</span><span class="hl-0">: </span><span class="hl-4">string</span><span class="hl-0">, </span><span class="hl-1">text</span><span class="hl-0">: </span><span class="hl-4">string</span><span class="hl-0">, </span><span class="hl-1">e</span><span class="hl-0">: </span><span class="hl-4">string</span><span class="hl-0">, </span><span class="hl-1">node</span><span class="hl-0">: </span><span class="hl-4">string</span><span class="hl-0">) </span><span class="hl-5">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0"> </span><span class="hl-6">return</span><span class="hl-0"> </span><span class="hl-5">new</span><span class="hl-0"> </span><span class="hl-2">ActionGithub</span><span class="hl-0">(</span><span class="hl-1">id</span><span class="hl-0">, </span><span class="hl-1">name</span><span class="hl-0">, </span><span class="hl-1">text</span><span class="hl-0">, </span><span class="hl-1">e</span><span class="hl-0">, </span><span class="hl-1">node</span><span class="hl-0">);</span><br/><span class="hl-0">};</span>
+</code><button>Copy</button></pre>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -88,33 +91,36 @@
 <h5><span class="tsd-kind-parameter">trigger</span>: <span class="tsd-signature-type">string</span></h5></li>
 <li>
 <h5><span class="tsd-kind-parameter">nodeVersion</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="../interfaces/base_IActionGithub.IActionGithub.html" class="tsd-signature-type tsd-kind-interface">IActionGithub</a></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <a href="../interfaces/base_IActionGithub.IActionGithub.html" class="tsd-signature-type tsd-kind-interface">IActionGithub</a></h4>
+<div class="tsd-comment tsd-typography"></div></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/d0345ad/src/base/Manager.ts#L12">base/Manager.ts:12</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member tsd-is-private"><a id="_registredAction" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>_registred<wbr/>Action</span><a href="#_registredAction" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">_registred<wbr/>Action</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/base_IActionGithub.IActionGithub.html" class="tsd-signature-type tsd-kind-interface">IActionGithub</a><span class="tsd-signature-symbol">&gt;</span></div><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/d0345ad/src/base/Manager.ts#L11">base/Manager.ts:11</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/1b21e47/src/base/Manager.ts#L23">base/Manager.ts:23</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="SINGLETON_INSTANCE" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <code class="tsd-tag ts-flagPrivate">Private</code> <span>SINGLETON_<wbr/>INSTANCE</span><a href="#SINGLETON_INSTANCE" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">SINGLETON_<wbr/>INSTANCE</span><span class="tsd-signature-symbol">:</span> <a href="base_Manager.Manager.html" class="tsd-signature-type tsd-kind-class">Manager</a><span class="tsd-signature-symbol"> = null</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">SINGLETON_<wbr/>INSTANCE</span><span class="tsd-signature-symbol">:</span> <a href="base_Manager.Manager.html" class="tsd-signature-type tsd-kind-class">Manager</a><span class="tsd-signature-symbol"> = null</span></div>
+<div class="tsd-comment tsd-typography"><p>private static variable to contain singleton instance of the Manager class, 
+don&#39;t use for get the instance, use <code>Manager.get()</code></p>
+</div>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/d0345ad/src/base/Manager.ts#L10">base/Manager.ts:10</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/1b21e47/src/base/Manager.ts#L11">base/Manager.ts:11</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Accessors</h2>
 <section class="tsd-panel tsd-member"><a id="customActionConstructor" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>custom<wbr/>Action<wbr/>Constructor</span><a href="#customActionConstructor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="customActionConstructor.customActionConstructor-1"><span class="tsd-signature-symbol">set</span> customActionConstructor<span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">lambdaConstructionAction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+<li class="tsd-signature" id="customActionConstructor.customActionConstructor-1"><span class="tsd-signature-symbol">set</span> customActionConstructor<span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">fn</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Setter, define custom lambda with your action constructor (class YourAction implements IActionGitHub { ... })</p>
+<div class="tsd-comment tsd-typography"><p>Setter</p>
+<p>define a custom lambda function with your action constructor (class YourAction implements IActionGitHub { ... })</p>
+<pre><code class="language-ts"><span class="hl-1">Manager</span><span class="hl-0">.</span><span class="hl-2">get</span><span class="hl-0">().</span><span class="hl-2">customActionConstructor</span><span class="hl-0"> = (</span><span class="hl-1">id</span><span class="hl-0">: </span><span class="hl-4">string</span><span class="hl-0">, </span><span class="hl-1">name</span><span class="hl-0">: </span><span class="hl-4">string</span><span class="hl-0">, </span><span class="hl-1">text</span><span class="hl-0">: </span><span class="hl-4">string</span><span class="hl-0">, </span><span class="hl-1">e</span><span class="hl-0">: </span><span class="hl-4">string</span><span class="hl-0">, </span><span class="hl-1">node</span><span class="hl-0">: </span><span class="hl-4">string</span><span class="hl-0">) </span><span class="hl-5">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0"> </span><span class="hl-6">return</span><span class="hl-0"> </span><span class="hl-5">new</span><span class="hl-0"> </span><span class="hl-2">ActionGithub</span><span class="hl-0">(</span><span class="hl-1">id</span><span class="hl-0">, </span><span class="hl-1">name</span><span class="hl-0">, </span><span class="hl-1">text</span><span class="hl-0">, </span><span class="hl-1">e</span><span class="hl-0">, </span><span class="hl-1">node</span><span class="hl-0">);</span><br/><span class="hl-0">};</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">lambdaConstructionAction</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span>, <span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">description</span>, <span class="tsd-kind-parameter">trigger</span>, <span class="tsd-kind-parameter">nodeVersion</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../interfaces/base_IActionGithub.IActionGithub.html" class="tsd-signature-type tsd-kind-interface">IActionGithub</a><span class="tsd-signature-symbol">)</span></h5>
+<h5><span class="tsd-kind-parameter">fn</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span>, <span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">description</span>, <span class="tsd-kind-parameter">trigger</span>, <span class="tsd-kind-parameter">nodeVersion</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../interfaces/base_IActionGithub.IActionGithub.html" class="tsd-signature-type tsd-kind-interface">IActionGithub</a><span class="tsd-signature-symbol">)</span></h5>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
@@ -138,7 +144,7 @@
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/d0345ad/src/base/Manager.ts#L81">base/Manager.ts:81</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/1b21e47/src/base/Manager.ts#L106">base/Manager.ts:106</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member"><a id="build" class="tsd-anchor"></a>
@@ -152,19 +158,19 @@
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/d0345ad/src/base/Manager.ts#L37">base/Manager.ts:37</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/1b21e47/src/base/Manager.ts#L54">base/Manager.ts:54</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="get" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>get</span><a href="#get" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="get.get-1"><span class="tsd-kind-call-signature">get</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="base_Manager.Manager.html" class="tsd-signature-type tsd-kind-class">Manager</a><a href="#get.get-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Getter unique instance of the Manager class</p>
+<div class="tsd-comment tsd-typography"><p>Getter singleton, get unique instance of the Manager class.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <a href="base_Manager.Manager.html" class="tsd-signature-type tsd-kind-class">Manager</a></h4><p>Manager</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/d0345ad/src/base/Manager.ts#L25">base/Manager.ts:25</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/1b21e47/src/base/Manager.ts#L42">base/Manager.ts:42</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -186,7 +192,6 @@
 <ul>
 <li><a href="#constructor" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-512"></use></svg><span>constructor</span></a></li>
 <li><a href="#_lambdaConstructionAction" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_lambda<wbr/>Construction<wbr/>Action</span></a></li>
-<li><a href="#_registredAction" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_registred<wbr/>Action</span></a></li>
 <li><a href="#SINGLETON_INSTANCE" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>SINGLETON_<wbr/>INSTANCE</span></a></li>
 <li><a href="#customActionConstructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>custom<wbr/>Action<wbr/>Constructor</span></a></li>
 <li><a href="#build" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>build</span></a></li>

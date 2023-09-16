@@ -3,16 +3,27 @@ import { ActionGithub } from "./ActionGithub";
 import fs from 'node:fs';
 import { pathResolve } from "./utils/File";
 
-/**
- * Manager Class
- */
 export class Manager {
+    /** 
+     * private static variable to contain singleton instance of the Manager class, 
+     * don't use for get the instance, use `Manager.get()`
+     */
     private static SINGLETON_INSTANCE: Manager | null = null;
-    private readonly _registredAction: Map<string, IActionGithub>;
+
+    /**
+     * private field for store a custom lambda function with your action constructor.
+     * 
+     * Call the setter manager.customActionConstructor and return your custom constructor (extended implementation from IactionGithub!)
+     * ```ts
+     * Manager.get().customActionConstructor = (id: string, name: string, text: string, e: string, node: string) => {
+     *  return new ActionGithub(id, name, text, e, node);
+     * };
+     * ```  
+     */
     private _lambdaConstructionAction: (id: string, name: string, description: string, trigger: string, nodeVersion: string) => IActionGithub;
 
     /**
-     * ## Constructor Manager Object
+     * Constructor Manager Object
      * 
      * The constructor is private because the class uses a singleton design pattern,
      * the goal is to restrict the instantiation of a class to a single object)
@@ -20,13 +31,12 @@ export class Manager {
      * So use the static get() method
      */
     private constructor() {
-        /* private constructor, use singleton getter: Manager.get() */
-        this._registredAction = new Map();
-        this._lambdaConstructionAction = (id: string, name: string, description: string, trigger: string, nodeVersion: string) => new ActionGithub(id, name, description, trigger, nodeVersion);
+        this.customActionConstructor = (id: string, name: string, description: string, trigger: string, nodeVersion: string) => new ActionGithub(id, name, description, trigger, nodeVersion);
     }
 
     /**
-     * Getter unique instance of the Manager class
+     * Getter singleton, get unique instance of the Manager class.
+     * 
      * @returns Manager
      */
     public static get(): Manager {
@@ -42,6 +52,8 @@ export class Manager {
      * @return void 
      */
     public build(): void {
+        let registredAction: Map<string, IActionGithub> = new Map()
+
         // Get all file/folder in folder src/tasks, apply filter for get only directory
         fs.readdirSync(pathResolve(__dirname, "../tasks"), { withFileTypes: true })
             .filter(dir => dir.isDirectory())
@@ -66,10 +78,10 @@ export class Manager {
                         );
 
                         // if not duplicate entry put action in map 
-                        if (this._registredAction.has(action.id))
+                        if (registredAction.has(action.id))
                             console.warn(`duplicate action {id: ${action.id}, path: ${dir.path}}`);
                         else
-                            this._registredAction.set(action.id, action);
+                            registredAction.set(action.id, action);
                     } else {
                         console.warn(`file config.json does not exist for tasks {id: ${dir.name}, path: ${dir.path}}`);
                     }
@@ -79,15 +91,20 @@ export class Manager {
             });
     }
 
-
     /**
-     * Setter, 
+     * Setter
      * 
-     * define custom a lambda function with your action constructor (class YourAction implements IActionGitHub { ... })
+     * define a custom lambda function with your action constructor (class YourAction implements IActionGitHub { ... })
      * 
+     * ```ts
+     * let m = Manager.get();
+     * m.customActionConstructor = (id: string, name: string, str: string, ev: string, node: string) => {
+     *      return new ActionGithub(id, name, str, ev, node);
+     * };
+     * ```  
      * @return void
      */
-    public set customActionConstructor(lambdaConstructionAction: (id: string, name: string, description: string, trigger: string, nodeVersion: string) => IActionGithub) {
-        this._lambdaConstructionAction = lambdaConstructionAction;
+    public set customActionConstructor(fn: (id: string, name: string, description: string, trigger: string, nodeVersion: string) => IActionGithub) {
+        this._lambdaConstructionAction = fn;
     }
 }

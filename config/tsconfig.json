@@ -14,5 +14,6 @@
         "useDefineForClassFields": true,
         "sourceMap": true,
         "baseUrl": ".",
-    }
+    },
+    "include": ["../src"],
 }

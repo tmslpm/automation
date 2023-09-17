@@ -1,17 +1,3 @@
-
-<table>
- <tr>
-   <td>
-     <details>
-      <summary>translation: <b>ENGLISH</b></summary><br/>
-      <input type="checkbox" checked />
-      <a href="https://github.com/tmslpm/automation" title="click to translate into EN" alt="click to translate into English"><pre>☑️ ENGLISH</pre></a>
-      <a href="https://github.com/tmslpm-fr/automation" title="click to translate into FR" alt="click to translate into French"><pre>🔲 FRENCH</pre></a>
-    </details>
-   </td>
- </tr>
-</table>
-
 # Automation 🚀
 
 Example of automation code.

@@ -1,3 +1,5 @@
+/** https://eslint.org/docs/latest/use/command-line-interface */
+console.log("loaded config", __filename)
 module.exports = {
     "env": {
         "browser": false,

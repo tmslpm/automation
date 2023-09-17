@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "___________________[Build]": "____________________________________________",
-    "build": "ts-node src/main.ts",
+    "build": "ts-node package/src/main.ts",
+    
     "___________________[Docs]": "____________________________________________",
-    "build-docs": "typedoc --tsconfig ./config/tsconfig.json --options ./config/typedoc.json --readme README-DOCS.md",
+    "build-docs": "typedoc --tsconfig ./config/typedoc.tsconfig.json --options ./config/typedoc.json --readme README-DOCS.md",
+    
     "___________________[Jest]": "____________________________________________",
     "jtest": "jest --config ./config/jest.config.js",
     "jinit": "jest --init --config=./config/jest.config.js",
+    
     "___________________[Utils]": "____________________________________________",
-    "lint": "eslint -f unix \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint -f unix \"package/src/**/*.{ts,tsx}\" --config ./config/.eslintrc.js",
     "bump": "npm version major --major"
   },
   "keywords": [

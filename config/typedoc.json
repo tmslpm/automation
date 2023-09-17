@@ -1,17 +1,17 @@
 {
     "$schema": "https://typedoc.org/schema.json",
+    "entryPoints": [
+        "../package/src"
+    ],
+    "exclude": [
+        "**/package/tasks/**",
+        "**/package/src/main.ts"
+    ],
     "name": "Automation Doc 🚀",
     "navigationLinks": {
         "⚡ Back to Github": "https://github.com/tmslpm/automation"
     },
     "entryPointStrategy": "expand",
-    "entryPoints": [
-        "../src"
-    ],
-    "exclude": [
-        "**/tasks/**",
-        "**/src/main.ts"
-    ],
     "visibilityFilters": {
         "protected": true,
         "private": true,
@@ -22,7 +22,7 @@
     },
     "excludePrivate": true,
     "includeVersion": true,
-    "customCss": "typedoc.css", 
+    "customCss": "typedoc.css",
     "groupOrder": [
         "References",
         "Modules",

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Manager | 🚀 DOCS - v1.0.0</title><meta name="description" content="Documentation for 🚀 DOCS"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Manager | Automation Doc 🚀 - v1.0.0</title><meta name="description" content="Documentation for Automation Doc 🚀"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -6,13 +6,13 @@
 <div id="tsd-toolbar-links"><a href="https://github.com/tmslpm/automation">⚡ Back to Github</a></div></div>
 <ul class="results">
 <li class="state loading">Preparing search index...</li>
-<li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">🚀 DOCS - v1.0.0</a></div>
+<li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">Automation Doc 🚀 - v1.0.0</a></div>
 <div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-menu"></use></svg></a></div></div></header>
 <div class="container container-main">
 <div class="col-content">
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
-<li><a href="../index.html">🚀 DOCS</a></li>
+<li><a href="../index.html">Automation Doc 🚀</a></li>
 <li><a href="../modules/Manager.html">Manager</a></li>
 <li><a href="Manager.Manager.html">Manager</a></li></ul>
 <h1>Class Manager</h1></div>
@@ -28,10 +28,10 @@ restricts the instantiation of a class to a singular instance...</p>
 </div>
 <div class="tsd-comment tsd-typography">
 <h4>Example</h4><p>Call singleton instance and execute the <a href="Manager.Manager.html#build" class="tsd-kind-method">Manager.build</a> method</p>
-<pre><code class="language-ts"><span class="hl-4">Manager</span><span class="hl-1">.</span><span class="hl-3">get</span><span class="hl-1">().</span><span class="hl-3">build</span><span class="hl-1">();</span><br/><span class="hl-5">// or</span><br/><span class="hl-0">let</span><span class="hl-1"> </span><span class="hl-4">manager</span><span class="hl-1"> = </span><span class="hl-4">Manager</span><span class="hl-1">.</span><span class="hl-3">get</span><span class="hl-1">();</span><br/><span class="hl-4">manager</span><span class="hl-1">.</span><span class="hl-3">build</span><span class="hl-1">();</span>
+<pre><code class="language-ts"><span class="hl-1">Manager</span><span class="hl-0">.</span><span class="hl-4">get</span><span class="hl-0">().</span><span class="hl-4">build</span><span class="hl-0">();</span><br/><span class="hl-5">// or</span><br/><span class="hl-2">let</span><span class="hl-0"> </span><span class="hl-1">manager</span><span class="hl-0"> = </span><span class="hl-1">Manager</span><span class="hl-0">.</span><span class="hl-4">get</span><span class="hl-0">();</span><br/><span class="hl-1">manager</span><span class="hl-0">.</span><span class="hl-4">build</span><span class="hl-0">();</span>
 </code><button>Copy</button></pre>
 <p>Modify the <a href="Manager.Manager.html#PATH_FOLDER_TASKS" class="tsd-kind-property">Manager.PATH_FOLDER_TASKS</a> and call singleton instance and execute the <a href="Manager.Manager.html#build" class="tsd-kind-method">Manager.build</a> method</p>
-<pre><code class="language-ts"><span class="hl-4">Manager</span><span class="hl-1">.</span><span class="hl-6">PATH_FOLDER_TASKS</span><span class="hl-1"> = </span><span class="hl-7">&quot;../myCustomFolder&quot;</span><span class="hl-1">;</span><br/><span class="hl-4">Manager</span><span class="hl-1">.</span><span class="hl-3">get</span><span class="hl-1">().</span><span class="hl-3">build</span><span class="hl-1">();</span>
+<pre><code class="language-ts"><span class="hl-1">Manager</span><span class="hl-0">.</span><span class="hl-6">PATH_FOLDER_TASKS</span><span class="hl-0"> = </span><span class="hl-7">&quot;../myCustomFolder&quot;</span><span class="hl-0">;</span><br/><span class="hl-1">Manager</span><span class="hl-0">.</span><span class="hl-4">get</span><span class="hl-0">().</span><span class="hl-4">build</span><span class="hl-0">();</span>
 </code><button>Copy</button></pre>
 </div></section>
 <section class="tsd-panel tsd-hierarchy">
@@ -39,7 +39,7 @@ restricts the instantiation of a class to a singular instance...</p>
 <ul class="tsd-hierarchy">
 <li><span class="target">Manager</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/b056198/src/base/Manager.ts#L34">Manager.ts:34</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/a53c46c/src/base/Manager.ts#L34">Manager.ts:34</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -66,14 +66,14 @@ restricts the instantiation of a class to a singular instance...</p>
 <div class="tsd-comment tsd-typography"><p>Variable to modify the tasks folder path.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default Value</h4><pre><code class="language-ts"><span class="hl-6">PATH_FOLDER_TASKS</span><span class="hl-1"> = </span><span class="hl-7">&quot;../tasks&quot;</span>
+<h4>Default Value</h4><pre><code class="language-ts"><span class="hl-6">PATH_FOLDER_TASKS</span><span class="hl-0"> = </span><span class="hl-7">&quot;../tasks&quot;</span>
 </code><button>Copy</button></pre>
 
-<h4>Example</h4><pre><code class="language-ts"><span class="hl-4">Manager</span><span class="hl-1">.</span><span class="hl-6">PATH_FOLDER_TASKS</span><span class="hl-1"> = </span><span class="hl-7">&quot;../myCustomFolder&quot;</span><span class="hl-1">;</span>
+<h4>Example</h4><pre><code class="language-ts"><span class="hl-1">Manager</span><span class="hl-0">.</span><span class="hl-6">PATH_FOLDER_TASKS</span><span class="hl-0"> = </span><span class="hl-7">&quot;../myCustomFolder&quot;</span><span class="hl-0">;</span>
 </code><button>Copy</button></pre>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/b056198/src/base/Manager.ts#L44">Manager.ts:44</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/a53c46c/src/base/Manager.ts#L44">Manager.ts:44</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member"><a id="build" class="tsd-anchor"></a>
@@ -87,7 +87,7 @@ restricts the instantiation of a class to a singular instance...</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/b056198/src/base/Manager.ts#L100">Manager.ts:100</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/a53c46c/src/base/Manager.ts#L100">Manager.ts:100</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="get" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>get</span><a href="#get" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -99,7 +99,7 @@ restricts the instantiation of a class to a singular instance...</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/b056198/src/base/Manager.ts#L88">Manager.ts:88</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/a53c46c/src/base/Manager.ts#L88">Manager.ts:88</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Accessors</h2>
 <section class="tsd-panel tsd-member"><a id="customActionConstructor" class="tsd-anchor"></a>
@@ -118,11 +118,11 @@ restricts the instantiation of a class to a singular instance...</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><p>void</p>
 
 <div class="tsd-comment tsd-typography">
-<h4>Example</h4><pre><code class="language-ts"><span class="hl-0">class</span><span class="hl-1"> </span><span class="hl-2">MyCustomActionGithub</span><span class="hl-1"> </span><span class="hl-0">implements</span><span class="hl-1"> </span><span class="hl-2">IActionGithub</span><span class="hl-1"> {</span><br/><span class="hl-1">     </span><span class="hl-5">// ... your implementation ...</span><br/><span class="hl-1">} </span><br/><br/><span class="hl-0">let</span><span class="hl-1"> </span><span class="hl-4">m</span><span class="hl-1"> = </span><span class="hl-4">Manager</span><span class="hl-1">.</span><span class="hl-3">get</span><span class="hl-1">();</span><br/><span class="hl-4">manager</span><span class="hl-1">.</span><span class="hl-3">customActionConstructor</span><span class="hl-1"> = (</span><br/><span class="hl-1">     </span><span class="hl-4">id</span><span class="hl-1">: </span><span class="hl-2">string</span><span class="hl-1">, </span><br/><span class="hl-1">     </span><span class="hl-4">name</span><span class="hl-1">: </span><span class="hl-2">string</span><span class="hl-1">, </span><br/><span class="hl-1">     </span><span class="hl-4">description</span><span class="hl-1">: </span><span class="hl-2">string</span><span class="hl-1">, </span><br/><span class="hl-1">     </span><span class="hl-4">trigger</span><span class="hl-1">: </span><span class="hl-2">string</span><span class="hl-1">, </span><br/><span class="hl-1">     </span><span class="hl-4">nodeVersion</span><span class="hl-1">: </span><span class="hl-2">string</span><br/><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> </span><span class="hl-0">new</span><span class="hl-1"> </span><span class="hl-3">MyCustomActionGithub</span><span class="hl-1">(</span><span class="hl-4">id</span><span class="hl-1">, </span><span class="hl-4">name</span><span class="hl-1">, </span><span class="hl-4">description</span><span class="hl-1">, </span><span class="hl-4">trigger</span><span class="hl-1">, </span><span class="hl-4">nodeVersion</span><span class="hl-1">);</span>
+<h4>Example</h4><pre><code class="language-ts"><span class="hl-2">class</span><span class="hl-0"> </span><span class="hl-3">MyCustomActionGithub</span><span class="hl-0"> </span><span class="hl-2">implements</span><span class="hl-0"> </span><span class="hl-3">IActionGithub</span><span class="hl-0"> {</span><br/><span class="hl-0">     </span><span class="hl-5">// ... your implementation ...</span><br/><span class="hl-0">} </span><br/><br/><span class="hl-2">let</span><span class="hl-0"> </span><span class="hl-1">m</span><span class="hl-0"> = </span><span class="hl-1">Manager</span><span class="hl-0">.</span><span class="hl-4">get</span><span class="hl-0">();</span><br/><span class="hl-1">manager</span><span class="hl-0">.</span><span class="hl-4">customActionConstructor</span><span class="hl-0"> = (</span><br/><span class="hl-0">     </span><span class="hl-1">id</span><span class="hl-0">: </span><span class="hl-3">string</span><span class="hl-0">, </span><br/><span class="hl-0">     </span><span class="hl-1">name</span><span class="hl-0">: </span><span class="hl-3">string</span><span class="hl-0">, </span><br/><span class="hl-0">     </span><span class="hl-1">description</span><span class="hl-0">: </span><span class="hl-3">string</span><span class="hl-0">, </span><br/><span class="hl-0">     </span><span class="hl-1">trigger</span><span class="hl-0">: </span><span class="hl-3">string</span><span class="hl-0">, </span><br/><span class="hl-0">     </span><span class="hl-1">nodeVersion</span><span class="hl-0">: </span><span class="hl-3">string</span><br/><span class="hl-0">) </span><span class="hl-2">=&gt;</span><span class="hl-0"> </span><span class="hl-2">new</span><span class="hl-0"> </span><span class="hl-4">MyCustomActionGithub</span><span class="hl-0">(</span><span class="hl-1">id</span><span class="hl-0">, </span><span class="hl-1">name</span><span class="hl-0">, </span><span class="hl-1">description</span><span class="hl-0">, </span><span class="hl-1">trigger</span><span class="hl-0">, </span><span class="hl-1">nodeVersion</span><span class="hl-0">);</span>
 </code><button>Copy</button></pre>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/b056198/src/base/Manager.ts#L162">Manager.ts:162</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/a53c46c/src/base/Manager.ts#L162">Manager.ts:162</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -148,7 +148,7 @@ restricts the instantiation of a class to a singular instance...</p>
 <li><a href="#get" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get</span></a></li>
 <li><a href="#customActionConstructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>custom<wbr/>Action<wbr/>Constructor</span></a></li></ul></div></details></div>
 <div class="site-menu">
-<nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1"></use></svg><span>🚀 DOCS - v1.0.0</span></a>
+<nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1"></use></svg><span>Automation Doc 🚀 - v1.0.0</span></a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="..">
 <li><a href="../modules/ActionGithub.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>ActionGithub</a></li>
 <li><a href="../modules/IActionGithub.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>IActionGithub</a></li>

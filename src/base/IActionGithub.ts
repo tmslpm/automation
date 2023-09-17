@@ -1,5 +1,36 @@
 import { RunnerImage } from "./enum/RunnerImage";
 
+/**
+ * Interface to be implemented if you create a new custom action
+ * 
+ * @example
+ * 
+ * ```ts
+ * class MyCustomActionGithub implements IActionGithub {
+ *      toYAML(): string {  
+ *          ...  
+ *      }
+ *      get id(): string {  
+ *          ...  
+ *      }
+ *      get name(): string {  
+ *          ...  
+ *      }
+ *      get description(): string {  
+ *          ...  
+ *      }
+ *      get trigger(): string {  
+ *          ...  
+ *      }
+ *      get runOn(): RunnerImage {  
+ *          ...  
+ *      }
+ *      get nodeVersion(): string {  
+ *          ...  
+ *      }
+ * }
+ * ```
+ */
 export interface IActionGithub {
 
     /**
@@ -51,4 +82,4 @@ export interface IActionGithub {
      */
     get nodeVersion(): string;
 
-}
+} 

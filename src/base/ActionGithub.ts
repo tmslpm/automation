@@ -1,6 +1,11 @@
 import { IActionGithub } from "./IActionGithub";
 import { RunnerImage } from "./enum/RunnerImage";
 
+/**
+ * Default implementation of the {@link IActionGithub}
+ * 
+ * @license MIT
+ */
 export class ActionGithub implements IActionGithub {
     private readonly _id: string;
     private readonly _name: string;

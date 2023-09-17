@@ -1,7 +1,4 @@
-import { ActionGithub } from "./ActionGithub";
-import { ActionManager } from "./ActionManager";
-
-console.log("start main", __dirname, __filename);
+import { ActionGithub } from "../../src/ActionGithub";
 
 class TestActionGithub extends ActionGithub {
 
@@ -21,8 +18,4 @@ class TestActionGithub extends ActionGithub {
 
 }
 
-const TEST_ACTION = new TestActionGithub();
-TEST_ACTION.onExecute();
-
-console.log(ActionManager.createSourceCodeAction(TestActionGithub))
-
+new TestActionGithub();

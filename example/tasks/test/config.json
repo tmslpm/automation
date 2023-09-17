@@ -1,5 +1,0 @@
-{
-    "name": "test",
-    "description": "Print test",
-    "trigger": "workflow_dispatch"
-}

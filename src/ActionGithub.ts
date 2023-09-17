@@ -1,3 +1,4 @@
+import { ActionManager } from "./ActionManager";
 import { IActionGithub } from "./interfaces/IActionGithub";
 
 /**
@@ -9,7 +10,9 @@ import { IActionGithub } from "./interfaces/IActionGithub";
  */
 export abstract class ActionGithub implements IActionGithub {
 
-    public constructor() { }
+    public constructor() {
+        ActionManager.get().register(this);
+    }
     
     abstract get id(): string;
 

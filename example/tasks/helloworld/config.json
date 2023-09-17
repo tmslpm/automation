@@ -1,5 +1,0 @@
-{
-    "name": "hello-world",
-    "description": "Print hello world",
-    "trigger": "workflow_dispatch"
-}

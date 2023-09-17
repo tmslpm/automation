@@ -1,10 +1,28 @@
-import { Manager } from "./base/Manager";
+import { ActionGithub } from "./ActionGithub";
+import { ActionManager } from "./ActionManager";
 
-console.log("Main.ts start...");
- 
+console.log("start main", __dirname, __filename);
 
-//Manager.get().build();
+class TestActionGithub extends ActionGithub {
 
-// print message in console
-console.log(process.versions.node)
+    get id(): string {
+        return "unique_id";
+    }
+    get name(): string {
+        return "my task";
+    }
+    get description(): string {
+        return "my task description";
+    }
+
+    public onExecute(): void {
+        console.warn("success");
+    }
+
+}
+
+const TEST_ACTION = new TestActionGithub();
+TEST_ACTION.onExecute();
+
+console.log(ActionManager.createSourceCodeAction(TestActionGithub))
 

@@ -1,4 +1,4 @@
-import { IActionGithub } from "../IActionGithub"
+import { IActionGithub } from "../interfaces/IActionGithub"
 
 /** 
  * @example 

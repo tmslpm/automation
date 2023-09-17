@@ -162,8 +162,8 @@ header a:hover {
   --color-icon-background: rgba(0, 0, 0, 0);
 }
 
-#icon-262144,
-#icon-262144,
+#icon-262144, 
+#icon-524288,
 #icon-1048576 {
   --color-text: #ff4d4d;
   --color-icon-background: rgba(0, 0, 0, 0);

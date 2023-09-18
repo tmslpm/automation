@@ -1,5 +1,7 @@
 
 import { ActionConfig } from "./ActionConfig";
+import { Common } from "./Common";
+import { getOrDefault, getOrThrow } from "./Utils";
 
 /**
  * Default implementation of the {@link IActionGithub}.
@@ -7,18 +9,23 @@ import { ActionConfig } from "./ActionConfig";
  * Represents a github action (https://github.com/features/actions).
  * 
  * @license MIT
+ * @author tmslpm
  */
 export class ActionGithub {
-    private readonly _id: string;
-    private readonly _config: ActionConfig
+    private readonly _act_id: string;
+    private readonly _act_name: string;
+    private readonly _act_description: string;
+    private readonly _act_trigger: string;
+    private readonly _act_runOn: string;
+    private readonly _act_nodeVersion: string;
 
-    // id: string, name: string, description: string
     public constructor(actionConfig: ActionConfig) {
-        if (!actionConfig.id) {
-            throw new Error("missing unique identifier in task.json")
-        }
-        this._id = actionConfig.id;
-        this._config = actionConfig;
+        this._act_id = getOrThrow(actionConfig.id);
+        this._act_name = getOrDefault(actionConfig.name, this.id);
+        this._act_description = getOrDefault(actionConfig.description, "has empty description");
+        this._act_trigger = getOrDefault(actionConfig.trigger, Common.ACTION_DEFAULT_TRIGGER);
+        this._act_runOn = getOrDefault(actionConfig.runOn, Common.ACTION_DEFAULT_PLATFORM_RUN_ON);
+        this._act_nodeVersion = getOrDefault(actionConfig.nodeVersion, Common.ACTION_DEFAULT_NODE_JS_VERSION);
     }
 
     /**
@@ -33,10 +40,10 @@ export class ActionGithub {
     public toString(): string {
         return "ActionGithub {\n"
             + `  id: ${this.id},\n`
-            + `  name: ${this.config.name},\n`
-            + `  trigger: ${this.config.trigger},\n`
-            + `  nodeVersion: ${this.config.nodeVersion},\n`
-            + `  runOn: ${this.config.runOn},\n`
+            + `  name: ${this.name},\n`
+            + `  trigger: ${this.trigger},\n`
+            + `  nodeVersion: ${this.nodeVersion},\n`
+            + `  runOn: ${this.runOn},\n`
             + `}`;
     }
 
@@ -51,42 +58,75 @@ export class ActionGithub {
      */
     public toYAML(): string {
         return ""
-            + `name: "${this.config.name}"\n`
+            + `name: "${this.name}"\n`
             + `run-name: \${{ github.actor }} - "this.description"\n`
-            + `on: ${this.config.trigger}\n`
+            + `on: ${this.trigger}\n`
             + `jobs:\n`
             + `  build:\n`
-            + `    runs-on: ${this.config.runOn}\n`
+            + `    runs-on: ${this.runOn}\n`
             + `    steps:\n`
             + `      - uses: actions/checkout@v3\n`
             + `      - uses: actions/setup-node@v3\n`
             + `        with:\n`
-            + `          node-version: "${this.config.nodeVersion}"\n`
+            + `          node-version: "${this.nodeVersion}"\n`
             + `          cache: "npm"\n`
-            + `      - name: "[node]: execute ${this.config.name} action"\n`
+            + `      - name: "[node]: execute ${this.name} action"\n`
             + `        run: |\n`
-            + `          node src/tasks/${this.config.id}/entry.ts\n`;
+            + `          node src/tasks/${this.id}/entry.ts\n`;
     }
 
-    
-
     /** 
-     * Getter `action.id`. 
+     * Public getter {@link _act_id} 
      * 
      * @returns { string }
      */
-    get id(): string {
-        return this._id;
+    public get id(): string {
+        return this._act_id;
     }
 
     /** 
-     * Getter `action.config`. 
+     * Public getter {@link _act_name} 
      * 
-     * @see {@link ActionConfig}
-     * 
-     * @returns { ActionConfig }
+     * @returns { string }
      */
-    get config(): ActionConfig {
-        return this._config;
+    public get name(): string {
+        return this._act_name;
     }
+
+    /** 
+     * Public getter {@link _act_description} 
+     * 
+     * @returns { string }
+     */
+    public get description(): string {
+        return this._act_description;
+    }
+
+    /** 
+     * Public getter {@link _act_trigger} 
+     * 
+     * @returns { string }
+     */
+    public get trigger(): string {
+        return this._act_trigger;
+    }
+
+    /** 
+     * Public getter {@link _act_runOn} 
+     * 
+     * @returns { string }
+     */
+    public get runOn(): string {
+        return this._act_runOn;
+    }
+
+    /** 
+     * Public getter {@link _act_nodeVersion} 
+     * 
+     * @returns { string }
+     */
+    public get nodeVersion(): string {
+        return this._act_nodeVersion;
+    }
+
 }

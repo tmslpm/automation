@@ -1,5 +1,6 @@
 import { ActionGithub } from "./ActionGithub";
 import { ActionConfig } from "./ActionConfig";
+import { getOrThrow } from "./Utils";
 
 /** 
  * The constructor is private because **the class uses a singleton design pattern**,
@@ -26,7 +27,10 @@ import { ActionConfig } from "./ActionConfig";
  * ```ts
  * ActionManager.PATH_FOLDER_TASKS = "../myCustomFolder";
  * ActionManager.get().build();
- * ``` 
+ * ```
+ * 
+ * @license MIT
+ * @author tmslpm
  */
 export class ActionManager {
     /**
@@ -82,11 +86,12 @@ export class ActionManager {
      */
     public register(...actionConfigs: ActionConfig[]): void {
         actionConfigs.forEach((actionConfig: ActionConfig) => {
+            let actionId = getOrThrow(actionConfig.id);
             // if not duplicate entry put action in map 
-            if (this.registredAction.has(actionConfig.id))
-                console.warn(`duplicate action{id: ${actionConfig.id}}`);
+            if (this.registredAction.has(actionId))
+                console.warn(`duplicate action{id: ${actionId}}`);
             else
-                this.registredAction.set(actionConfig.id, new ActionGithub(actionConfig));
+                this.registredAction.set(actionId, new ActionGithub(actionConfig));
         });
     }
 

@@ -1,6 +1,7 @@
 import { ActionGithub } from "./ActionGithub";
 import { ActionConfig } from "./ActionConfig";
 import { getOrThrow } from "./Utils";
+import { existsSync, fstat } from "fs";
 
 /** 
  * The constructor is private because **the class uses a singleton design pattern**,
@@ -27,8 +28,6 @@ import { getOrThrow } from "./Utils";
  * @author tmslpm
  */
 export class ActionManager {
-
-
     /** 
      * private static variable to contain singleton instance of the {@link ActionManager} class, 
      * don't use for get the instance, use {@link ActionManager.get}()
@@ -67,24 +66,72 @@ export class ActionManager {
      * 
      * @param { ActionGithub[] } actionConfigs - action to be register
      * 
-     * @returns { void }
+     * @returns { ActionManager } the singleton instance of the ActionManager
      */
-    public register(...actionConfigs: ActionConfig[]): void {
-        actionConfigs.forEach((actionConfig: ActionConfig) => {
-            let actionId = getOrThrow(actionConfig.id);
-            // if not duplicate entry put action in map 
-            if (this.registredAction.has(actionId))
-                console.warn(`duplicate action{id: ${actionId}}`);
-            else
-                this.registredAction.set(actionId, new ActionGithub(actionConfig));
+    public register(...pathToActionConfigs: string[]): ActionManager {
+        pathToActionConfigs.forEach((currentPath: string) => {
+            let hasActionFile = true;
+            let actionConfig = {} as ActionConfig;
+
+            // check is a file and is json file
+            if (!currentPath.endsWith("action.json")) {
+                hasActionFile = false;
+                console.error(">> Invalid path recevied, reason: path not ends with `action.json`, path: ", currentPath)
+            }
+
+            // check if json file exist
+            if (hasActionFile && !existsSync(currentPath)) {
+                hasActionFile = false;
+                console.error(">> not found json file for the action, path: ", currentPath)
+            }
+
+            // try require json
+            if (hasActionFile) {
+                try {
+                    actionConfig = require(currentPath)
+                } catch (_ignored) {
+                    hasActionFile = false;
+                    console.log(">> Cannot require json, path: ", currentPath)
+                }
+            }
+
+            // try get id 
+            if (hasActionFile) {
+                try {
+                    getOrThrow(actionConfig.id);
+                } catch (_ignored) {
+                    hasActionFile = false;
+                    console.log(">> Missing field `id` in action.json, path: ", currentPath)
+                }
+            }
+
+            // check if typescript file exist
+            if (hasActionFile) {
+                let tsFileActionPath = currentPath.replace("action.json", "action.ts");
+                if (!existsSync(tsFileActionPath)) {
+                    hasActionFile = false;
+                    console.error(">> Not found ts script for the action, path: ", tsFileActionPath)
+                }
+            }
+
+            if (hasActionFile) {
+                let actionId = getOrThrow(actionConfig.id);
+                // if not duplicate entry put action in map 
+                if (!this.registredAction.has(actionId)) {
+                    this.registredAction.set(actionId, new ActionGithub(actionConfig));
+                } else {
+                    console.error(`duplicate action{id: ${actionId}}`);
+                }
+            }
         });
+        return this;
     }
 
     /**
      *  
      * @return { void } 
      */
-    public build(): void {
+    public generateAction(): void {
 
     }
 

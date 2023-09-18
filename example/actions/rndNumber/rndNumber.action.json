@@ -1,0 +1,6 @@
+{
+  "id": "random-number",
+  "name": "random number",
+  "description": "my random number",
+  "trigger": "workflow_dispatch"
+}

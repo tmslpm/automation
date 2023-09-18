@@ -43,11 +43,16 @@ export function getOrThrow<T>(value: T) {
 };
 
 /**
- * Resolve path cross plateform
- * @param a: path left
- * @param b: path right 
- * @returns path resolved string
+ * more information see {@link path.resolve}
+ * 
+ * @param paths A sequence of paths or path segments.
+ * 
+ * @throws {TypeError} if any of the arguments is not a string.
+ * 
+ * @returns { string }
  */
-export const pathResolve = (a: string, b: string): string => os.type() === "Windows_NT"
-    ? path.resolve(a, b).replace(/\\/g, '/')
-    : path.resolve(a, b);
+export function pathResolve(...paths: string[]): string {
+    if (os.type() === "Windows_NT")
+        return path.resolve(...paths).replace(/\\/g, '/');
+    return path.resolve(...paths);
+}

@@ -1,8 +1,5 @@
-import { IActionGithub } from "./interfaces/IActionGithub";
 import { ActionGithub } from "./ActionGithub";
-import { pathResolve } from "./utils/File";
-import fs from 'node:fs';
-import { fnBuilderIActionGithub } from "./types/fnBuilderIActionGithub";
+import { ActionConfig } from "./ActionConfig";
 
 /** 
  * The constructor is private because **the class uses a singleton design pattern**,
@@ -50,7 +47,7 @@ export class ActionManager {
     private static SINGLETON_INSTANCE: ActionManager | null = null;
 
     /** Map containing all {@link IActionGithub} registered during the process */
-    private readonly _registredAction: Map<string, IActionGithub>;
+    private readonly _registredAction: Map<string, ActionGithub>;
 
     /**
      * Constructor {@link ActionManager}
@@ -83,13 +80,13 @@ export class ActionManager {
      * 
      * @returns { void }
      */
-    public register(...actions: IActionGithub[]): void {
-        actions.forEach((action: IActionGithub) => {
+    public register(...actionConfigs: ActionConfig[]): void {
+        actionConfigs.forEach((actionConfig: ActionConfig) => {
             // if not duplicate entry put action in map 
-            if (this.registredAction.has(action.id))
-                console.warn(`duplicate action{id: ${action.id}}`);
+            if (this.registredAction.has(actionConfig.id))
+                console.warn(`duplicate action{id: ${actionConfig.id}}`);
             else
-                this.registredAction.set(action.id, action);
+                this.registredAction.set(actionConfig.id, new ActionGithub(actionConfig));
         });
     }
 
@@ -107,39 +104,8 @@ export class ActionManager {
      * 
      * @returns { Map<string, IActionGithub> }
      */
-    public get registredAction(): Map<string, IActionGithub> {
+    public get registredAction(): Map<string, ActionGithub> {
         return this._registredAction;
-    }
-
-    /**
-     * Create raw source code for the action entry
-     * 
-     * @example
-     * 
-     * ```ts
-     * class TestActionGithub extends ActionGithub { 
-     *      // ... your implementation ... 
-     * }
-     * 
-     * let str = ActionManager.createSourceCodeAction(TestActionGithub);
-     * 
-     * console.log(str);
-     * ```
-     * 
-     * output console:
-     * ```ts
-     * import { TestActionGithub } from "./path/TestActionGithub";
-     * (() => {new TestActionGithub()})();
-     * ```
-     * 
-     * @param { Function } classRef - Class reference
-     * 
-     * @returns { string }
-     */
-    public static createSourceCodeAction(classRef: Function): string {
-        return ``
-            + `import { ${classRef.name} } from "./path/${classRef.name}";\n`
-            + `(() => {new ${classRef.name}()})();\n`;
     }
 
 }

@@ -28,10 +28,10 @@ restricts the instantiation of a class to a singular instance...</p>
 </div>
 <div class="tsd-comment tsd-typography">
 <h4>Example</h4><p>Call singleton instance and execute the <a href="ActionManager.ActionManager.html#build" class="tsd-kind-method">ActionManager.build</a> method</p>
-<pre><code class="language-ts"><span class="hl-1">ActionManager</span><span class="hl-0">.</span><span class="hl-4">get</span><span class="hl-0">().</span><span class="hl-4">build</span><span class="hl-0">();</span><br/><span class="hl-6">// or</span><br/><span class="hl-2">let</span><span class="hl-0"> </span><span class="hl-1">manager</span><span class="hl-0"> = </span><span class="hl-1">ActionManager</span><span class="hl-0">.</span><span class="hl-4">get</span><span class="hl-0">();</span><br/><span class="hl-1">manager</span><span class="hl-0">.</span><span class="hl-4">build</span><span class="hl-0">();</span>
+<pre><code class="language-ts"><span class="hl-1">ActionManager</span><span class="hl-0">.</span><span class="hl-2">get</span><span class="hl-0">().</span><span class="hl-2">build</span><span class="hl-0">();</span><br/><span class="hl-3">// or</span><br/><span class="hl-4">let</span><span class="hl-0"> </span><span class="hl-1">manager</span><span class="hl-0"> = </span><span class="hl-1">ActionManager</span><span class="hl-0">.</span><span class="hl-2">get</span><span class="hl-0">();</span><br/><span class="hl-1">manager</span><span class="hl-0">.</span><span class="hl-2">build</span><span class="hl-0">();</span>
 </code><button>Copy</button></pre>
 <p>Modify the <a href="ActionManager.ActionManager.html#PATH_FOLDER_TASKS" class="tsd-kind-property">ActionManager.PATH_FOLDER_TASKS</a> and call singleton instance and execute the <a href="ActionManager.ActionManager.html#build" class="tsd-kind-method">ActionManager.build</a> method</p>
-<pre><code class="language-ts"><span class="hl-1">ActionManager</span><span class="hl-0">.</span><span class="hl-8">PATH_FOLDER_TASKS</span><span class="hl-0"> = </span><span class="hl-5">&quot;../myCustomFolder&quot;</span><span class="hl-0">;</span><br/><span class="hl-1">ActionManager</span><span class="hl-0">.</span><span class="hl-4">get</span><span class="hl-0">().</span><span class="hl-4">build</span><span class="hl-0">();</span>
+<pre><code class="language-ts"><span class="hl-1">ActionManager</span><span class="hl-0">.</span><span class="hl-5">PATH_FOLDER_TASKS</span><span class="hl-0"> = </span><span class="hl-6">&quot;../myCustomFolder&quot;</span><span class="hl-0">;</span><br/><span class="hl-1">ActionManager</span><span class="hl-0">.</span><span class="hl-2">get</span><span class="hl-0">().</span><span class="hl-2">build</span><span class="hl-0">();</span>
 </code><button>Copy</button></pre>
 </div></section>
 <section class="tsd-panel tsd-hierarchy">
@@ -39,7 +39,7 @@ restricts the instantiation of a class to a singular instance...</p>
 <ul class="tsd-hierarchy">
 <li><span class="target">ActionManager</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/080c4b9/package/src/ActionManager.ts#L34">ActionManager.ts:34</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/6ef1618/src/ActionManager.ts#L31">ActionManager.ts:31</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -53,7 +53,6 @@ restricts the instantiation of a class to a singular instance...</p>
 <h3 class="tsd-index-heading">Methods</h3>
 <div class="tsd-index-list"><a href="ActionManager.ActionManager.html#build" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>build</span></a>
 <a href="ActionManager.ActionManager.html#register" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>register</span></a>
-<a href="ActionManager.ActionManager.html#createSourceCodeAction" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>create<wbr/>Source<wbr/>Code<wbr/>Action</span></a>
 <a href="ActionManager.ActionManager.html#get" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get</span></a>
 </div></section>
 <section class="tsd-index-section">
@@ -68,14 +67,14 @@ restricts the instantiation of a class to a singular instance...</p>
 <div class="tsd-comment tsd-typography"><p>Variable to modify the tasks folder path.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default Value</h4><pre><code class="language-ts"><span class="hl-8">PATH_FOLDER_TASKS</span><span class="hl-0"> = </span><span class="hl-5">&quot;../tasks&quot;</span>
+<h4>Default Value</h4><pre><code class="language-ts"><span class="hl-5">PATH_FOLDER_TASKS</span><span class="hl-0"> = </span><span class="hl-6">&quot;../tasks&quot;</span>
 </code><button>Copy</button></pre>
 
-<h4>Example</h4><pre><code class="language-ts"><span class="hl-1">ActionManager</span><span class="hl-0">.</span><span class="hl-8">PATH_FOLDER_TASKS</span><span class="hl-0"> = </span><span class="hl-5">&quot;../myCustomFolder&quot;</span><span class="hl-0">;</span>
+<h4>Example</h4><pre><code class="language-ts"><span class="hl-1">ActionManager</span><span class="hl-0">.</span><span class="hl-5">PATH_FOLDER_TASKS</span><span class="hl-0"> = </span><span class="hl-6">&quot;../myCustomFolder&quot;</span><span class="hl-0">;</span>
 </code><button>Copy</button></pre>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/080c4b9/package/src/ActionManager.ts#L44">ActionManager.ts:44</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/6ef1618/src/ActionManager.ts#L41">ActionManager.ts:41</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member"><a id="build" class="tsd-anchor"></a>
@@ -83,56 +82,28 @@ restricts the instantiation of a class to a singular instance...</p>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="build.build-1"><span class="tsd-kind-call-signature">build</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#build.build-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Get all folders in the &quot;./src/tasks&quot; folder, then generate all <a href="../interfaces/interfaces_IActionGithub.IActionGithub.html" class="tsd-kind-interface">IActionGithub</a> objects and save them in the hashmap</p>
+<div class="tsd-comment tsd-typography"><p>Get all folders in the &quot;./src/tasks&quot; folder, then generate all IActionGithub objects and save them in the hashmap</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/080c4b9/package/src/ActionManager.ts#L101">ActionManager.ts:101</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/6ef1618/src/ActionManager.ts#L98">ActionManager.ts:98</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="register" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>register</span><a href="#register" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="register.register-1"><span class="tsd-kind-call-signature">register</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">actions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#register.register-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="register.register-1"><span class="tsd-kind-call-signature">register</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">actionConfigs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#register.register-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Method for register an <a href="../interfaces/interfaces_IActionGithub.IActionGithub.html" class="tsd-kind-interface">IActionGithub</a> in the <a href="ActionManager.ActionManager.html" class="tsd-kind-class">ActionManager</a>.</p>
+<div class="tsd-comment tsd-typography"><p>Method for register an IActionGithub in the <a href="ActionManager.ActionManager.html" class="tsd-kind-class">ActionManager</a>.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">actions</span>: <a href="../interfaces/interfaces_IActionGithub.IActionGithub.html" class="tsd-signature-type tsd-kind-interface">IActionGithub</a><span class="tsd-signature-symbol">[]</span></h5>
-<div class="tsd-comment tsd-typography"><p>action to be register</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">actionConfigs</span>: <a href="../types/ActionConfig.ActionConfig.html" class="tsd-signature-type tsd-kind-type-alias">ActionConfig</a><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/080c4b9/package/src/ActionManager.ts#L86">ActionManager.ts:86</a></li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member"><a id="createSourceCodeAction" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>create<wbr/>Source<wbr/>Code<wbr/>Action</span><a href="#createSourceCodeAction" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="createSourceCodeAction.createSourceCodeAction-1"><span class="tsd-kind-call-signature">create<wbr/>Source<wbr/>Code<wbr/>Action</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">classRef</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#createSourceCodeAction.createSourceCodeAction-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Create raw source code for the action entry</p>
-</div>
-<div class="tsd-parameters">
-<h4 class="tsd-parameters-title">Parameters</h4>
-<ul class="tsd-parameter-list">
-<li>
-<h5><span class="tsd-kind-parameter">classRef</span>: <span class="tsd-signature-type ">Function</span></h5>
-<div class="tsd-comment tsd-typography"><p>Class reference</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-<div class="tsd-comment tsd-typography">
-<h4>Example</h4><pre><code class="language-ts"><span class="hl-2">class</span><span class="hl-0"> </span><span class="hl-3">TestActionGithub</span><span class="hl-0"> </span><span class="hl-2">extends</span><span class="hl-0"> </span><span class="hl-3">ActionGithub</span><span class="hl-0"> { </span><br/><span class="hl-0">     </span><span class="hl-6">// ... your implementation ... </span><br/><span class="hl-0">}</span><br/><br/><span class="hl-2">let</span><span class="hl-0"> </span><span class="hl-1">str</span><span class="hl-0"> = </span><span class="hl-1">ActionManager</span><span class="hl-0">.</span><span class="hl-4">createSourceCodeAction</span><span class="hl-0">(</span><span class="hl-1">TestActionGithub</span><span class="hl-0">);</span><br/><br/><span class="hl-1">console</span><span class="hl-0">.</span><span class="hl-4">log</span><span class="hl-0">(</span><span class="hl-1">str</span><span class="hl-0">);</span>
-</code><button>Copy</button></pre>
-<p>output console:</p>
-<pre><code class="language-ts"><span class="hl-7">import</span><span class="hl-0"> { </span><span class="hl-1">TestActionGithub</span><span class="hl-0"> } </span><span class="hl-7">from</span><span class="hl-0"> </span><span class="hl-5">&quot;./path/TestActionGithub&quot;</span><span class="hl-0">;</span><br/><span class="hl-0">(() </span><span class="hl-2">=&gt;</span><span class="hl-0"> {</span><span class="hl-2">new</span><span class="hl-0"> </span><span class="hl-4">TestActionGithub</span><span class="hl-0">()})();</span>
-</code><button>Copy</button></pre>
-</div><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/080c4b9/package/src/ActionManager.ts#L139">ActionManager.ts:139</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/6ef1618/src/ActionManager.ts#L83">ActionManager.ts:83</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="get" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>get</span><a href="#get" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -143,20 +114,20 @@ restricts the instantiation of a class to a singular instance...</p>
 <h4 class="tsd-returns-title">Returns <a href="ActionManager.ActionManager.html" class="tsd-signature-type tsd-kind-class">ActionManager</a></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/080c4b9/package/src/ActionManager.ts#L72">ActionManager.ts:72</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/6ef1618/src/ActionManager.ts#L69">ActionManager.ts:69</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Accessors</h2>
 <section class="tsd-panel tsd-member"><a id="registredAction" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>registred<wbr/>Action</span><a href="#registredAction" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="registredAction.registredAction-1"><span class="tsd-signature-symbol">get</span> registredAction<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/interfaces_IActionGithub.IActionGithub.html" class="tsd-signature-type tsd-kind-interface">IActionGithub</a><span class="tsd-signature-symbol">&gt;</span></li>
+<li class="tsd-signature" id="registredAction.registredAction-1"><span class="tsd-signature-symbol">get</span> registredAction<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="ActionGithub.ActionGithub.html" class="tsd-signature-type tsd-kind-class">ActionGithub</a><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Map containing all <a href="../interfaces/interfaces_IActionGithub.IActionGithub.html" class="tsd-kind-interface">IActionGithub</a> registered during the process</p>
+<div class="tsd-comment tsd-typography"><p>Map containing all IActionGithub registered during the process</p>
 </div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/interfaces_IActionGithub.IActionGithub.html" class="tsd-signature-type tsd-kind-interface">IActionGithub</a><span class="tsd-signature-symbol">&gt;</span></h4>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="ActionGithub.ActionGithub.html" class="tsd-signature-type tsd-kind-class">ActionGithub</a><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/tmslpm/automation/blob/080c4b9/package/src/ActionManager.ts#L110">ActionManager.ts:110</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/tmslpm/automation/blob/6ef1618/src/ActionManager.ts#L107">ActionManager.ts:107</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -180,17 +151,14 @@ restricts the instantiation of a class to a singular instance...</p>
 <li><a href="#PATH_FOLDER_TASKS" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>PATH_<wbr/>FOLDER_<wbr/>TASKS</span></a></li>
 <li><a href="#build" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>build</span></a></li>
 <li><a href="#register" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>register</span></a></li>
-<li><a href="#createSourceCodeAction" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>create<wbr/>Source<wbr/>Code<wbr/>Action</span></a></li>
 <li><a href="#get" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get</span></a></li>
 <li><a href="#registredAction" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-262144"></use></svg><span>registred<wbr/>Action</span></a></li></ul></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1"></use></svg><span>Automation Doc 🚀 - v1.0.0</span></a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="..">
+<li><a href="../modules/ActionConfig.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>ActionConfig</a></li>
 <li><a href="../modules/ActionGithub.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>ActionGithub</a></li>
 <li><a href="../modules/ActionManager.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>ActionManager</a></li>
-<li><a href="../modules/enums_Trigger.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>enums/Trigger</a></li>
-<li><a href="../modules/interfaces_IActionGithub.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>interfaces/IActionGithub</a></li>
-<li><a href="../modules/types_fnBuilderIActionGithub.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>types/fnBuilderIActionGithub</a></li>
 <li><a href="../modules/utils_File.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>utils/File</a></li></ul></nav></div></div></div>
 <div class="tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" rel="noopener" target="_blank">TypeDoc</a></p></div>

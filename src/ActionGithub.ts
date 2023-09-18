@@ -1,5 +1,5 @@
-import { ActionManager } from "./ActionManager";
-import { IActionGithub } from "./interfaces/IActionGithub";
+
+import { ActionConfig } from "./ActionConfig";
 
 /**
  * Default implementation of the {@link IActionGithub}.
@@ -8,80 +8,80 @@ import { IActionGithub } from "./interfaces/IActionGithub";
  * 
  * @license MIT
  */
-export class ActionGithub implements IActionGithub {
-    public _id: string;
-    public _name: string
-    public _description: string;
-    public _trigger: string = "workflow_dispatch";
-    public _runOn: string = "ubuntu-latest";
-    public _nodeVersion: string = "18.7.0";
+export class ActionGithub {
+    private readonly _id: string;
+    private readonly _config: ActionConfig
 
     // id: string, name: string, description: string
-    public constructor() {
-        this._id = "id";
-        this._name = "name";
-        this._description = "description";
+    public constructor(actionConfig: ActionConfig) {
+        this._id = actionConfig.id;
+        this._config = actionConfig;
     }
 
-    public static build() {
-        return new this();
-    }
-
-    public onExecute(): void {
-        console.warn("{@link ActionGithub.onExecute} not implemented.", this.toString());
-    }
-
+    /**
+     * Return the object {@link IActionGithub} as `string`.
+     * 
+     * #### Example
+     * 
+     * see the implementation of the {@link toString} method in class {@link ActionGithub.ActionGithub.toString} 
+     * 
+     * @returns { string }
+     */
     public toString(): string {
         return "ActionGithub {\n"
             + `  id: ${this.id},\n`
-            + `  name: ${this.name},\n`
-            + `  trigger: ${this.trigger},\n`
-            + `  nodeVersion: ${this.nodeVersion},\n`
-            + `  runOn: ${this.runOn},\n`
+            + `  name: ${this.config.name},\n`
+            + `  trigger: ${this.config.trigger},\n`
+            + `  nodeVersion: ${this.config.nodeVersion},\n`
+            + `  runOn: ${this.config.runOn},\n`
             + `}`;
     }
 
+    /**
+     * Create the YAML source code for this Github Action.
+     * 
+     * #### Example
+     * 
+     * see the implementation of the {@link toYAML} method in class {@link ActionGithub.ActionGithub.toYAML}
+     * 
+     * @returns { string }
+     */
     public toYAML(): string {
         return ""
-            + `name: "${this.name}"\n`
+            + `name: "${this.config.name}"\n`
             + `run-name: \${{ github.actor }} - "this.description"\n`
-            + `on: ${this.trigger}\n`
+            + `on: ${this.config.trigger}\n`
             + `jobs:\n`
             + `  build:\n`
-            + `    runs-on: ${this.runOn}\n`
+            + `    runs-on: ${this.config.runOn}\n`
             + `    steps:\n`
             + `      - uses: actions/checkout@v3\n`
             + `      - uses: actions/setup-node@v3\n`
             + `        with:\n`
-            + `          node-version: "${this.nodeVersion}"\n`
+            + `          node-version: "${this.config.nodeVersion}"\n`
             + `          cache: "npm"\n`
-            + `      - name: "[node]: execute ${this.name} action"\n`
+            + `      - name: "[node]: execute ${this.config.name} action"\n`
             + `        run: |\n`
-            + `          node src/tasks/${this.id}/entry.ts\n`;
+            + `          node src/tasks/${this.config.id}/entry.ts\n`;
     }
 
+    /** 
+     * Getter `action.id`. 
+     * 
+     * @returns { string }
+     */
     get id(): string {
         return this._id;
     }
 
-    get name(): string {
-        return this._name;
+    /** 
+     * Getter `action.config`. 
+     * 
+     * @see {@link ActionConfig}
+     * 
+     * @returns { ActionConfig }
+     */
+    get config(): ActionConfig {
+        return this._config;
     }
-
-    get description(): string {
-        return this._description;
-    }
-
-    public get trigger(): string {
-        return this._trigger;
-    }
-
-    public get runOn(): string {
-        return this._runOn;
-    }
-
-    public get nodeVersion(): string {
-        return this._nodeVersion;
-    }
-
 }

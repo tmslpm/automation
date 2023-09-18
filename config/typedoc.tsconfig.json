@@ -15,5 +15,5 @@
     "sourceMap": true,
     "baseUrl": "."
   },
-  "include": ["../package/src"]
+  "include": ["../src"]
 }

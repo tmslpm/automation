@@ -8,19 +8,28 @@ import { IActionGithub } from "./interfaces/IActionGithub";
  * 
  * @license MIT
  */
-export abstract class ActionGithub implements IActionGithub {
+export class ActionGithub implements IActionGithub {
+    public _id: string;
+    public _name: string
+    public _description: string;
+    public _trigger: string = "workflow_dispatch";
+    public _runOn: string = "ubuntu-latest";
+    public _nodeVersion: string = "18.7.0";
 
+    // id: string, name: string, description: string
     public constructor() {
-        ActionManager.get().register(this);
+        this._id = "id";
+        this._name = "name";
+        this._description = "description";
     }
-    
-    abstract get id(): string;
 
-    abstract get name(): string;
+    public static build() {
+        return new this();
+    }
 
-    abstract get description(): string;
-  
-    abstract onExecute(): void;
+    public onExecute(): void {
+        console.warn("{@link ActionGithub.onExecute} not implemented.", this.toString());
+    }
 
     public toString(): string {
         return "ActionGithub {\n"
@@ -51,16 +60,28 @@ export abstract class ActionGithub implements IActionGithub {
             + `          node src/tasks/${this.id}/entry.ts\n`;
     }
 
+    get id(): string {
+        return this._id;
+    }
+
+    get name(): string {
+        return this._name;
+    }
+
+    get description(): string {
+        return this._description;
+    }
+
     public get trigger(): string {
-        return "workflow_dispatch";
+        return this._trigger;
     }
 
     public get runOn(): string {
-        return "ubuntu-latest";
+        return this._runOn;
     }
 
     public get nodeVersion(): string {
-        return "18.7.0";
+        return this._nodeVersion;
     }
 
 }

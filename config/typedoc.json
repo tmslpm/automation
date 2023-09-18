@@ -1,12 +1,9 @@
 {
     "$schema": "https://typedoc.org/schema.json",
     "entryPoints": [
-        "../package/src"
+        "../src"
     ],
-    "exclude": [
-        "**/package/tasks/**",
-        "**/package/src/main.ts"
-    ],
+    "exclude": [],
     "name": "Automation Doc 🚀",
     "navigationLinks": {
         "⚡ Back to Github": "https://github.com/tmslpm/automation"

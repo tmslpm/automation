@@ -3,9 +3,7 @@ import { ActionConfig } from "./ActionConfig";
 import { Common } from "./Common";
 import { getOrDefault, getOrThrow } from "./Utils";
 
-/**
- * Default implementation of the {@link IActionGithub}.
- * 
+/** 
  * Represents a github action (https://github.com/features/actions).
  * 
  * @license MIT
@@ -22,18 +20,14 @@ export class ActionGithub {
     public constructor(actionConfig: ActionConfig) {
         this._act_id = getOrThrow(actionConfig.id);
         this._act_name = getOrDefault(actionConfig.name, this.id);
-        this._act_description = getOrDefault(actionConfig.description, "has empty description");
+        this._act_description = getOrDefault(actionConfig.description, Common.ACTION_DEFAULT_DESCRIPTION);
         this._act_trigger = getOrDefault(actionConfig.trigger, Common.ACTION_DEFAULT_TRIGGER);
         this._act_runOn = getOrDefault(actionConfig.runOn, Common.ACTION_DEFAULT_PLATFORM_RUN_ON);
         this._act_nodeVersion = getOrDefault(actionConfig.nodeVersion, Common.ACTION_DEFAULT_NODE_JS_VERSION);
     }
 
     /**
-     * Return the object {@link IActionGithub} as `string`.
-     * 
-     * #### Example
-     * 
-     * see the implementation of the {@link toString} method in class {@link ActionGithub.ActionGithub.toString} 
+     * Return the object {@link ActionGithub} as `string`.
      * 
      * @returns { string }
      */

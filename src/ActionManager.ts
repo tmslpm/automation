@@ -21,28 +21,13 @@ import { getOrThrow } from "./Utils";
  * // or
  * let manager = ActionManager.get();
  * manager.build();
- * ```
- * 
- * Modify the {@link ActionManager.PATH_FOLDER_TASKS} and call singleton instance and execute the {@link ActionManager.build} method
- * ```ts
- * ActionManager.PATH_FOLDER_TASKS = "../myCustomFolder";
- * ActionManager.get().build();
- * ```
+ * ``` 
  * 
  * @license MIT
  * @author tmslpm
  */
 export class ActionManager {
-    /**
-     * Variable to modify the tasks folder path. 
-     * 
-     * @defaultValue PATH_FOLDER_TASKS = "../tasks" 
-     * @example
-     * ```ts
-     * ActionManager.PATH_FOLDER_TASKS = "../myCustomFolder";
-     * ```
-     */
-    public static PATH_FOLDER_TASKS: string = "../tasks";
+
 
     /** 
      * private static variable to contain singleton instance of the {@link ActionManager} class, 
@@ -50,7 +35,7 @@ export class ActionManager {
      */
     private static SINGLETON_INSTANCE: ActionManager | null = null;
 
-    /** Map containing all {@link IActionGithub} registered during the process */
+    /** Map containing all {@link ActionGithub} registered during the process */
     private readonly _registredAction: Map<string, ActionGithub>;
 
     /**
@@ -78,9 +63,9 @@ export class ActionManager {
     }
 
     /**
-     * Method for register an {@link IActionGithub} in the {@link ActionManager}.
+     * Method for register an {@link ActionGithub} in the {@link ActionManager}.
      * 
-     * @param { IActionGithub[] } actions - action to be register
+     * @param { ActionGithub[] } actionConfigs - action to be register
      * 
      * @returns { void }
      */
@@ -96,8 +81,7 @@ export class ActionManager {
     }
 
     /**
-     * Get all folders in the "./src/tasks" folder, then generate all {@link IActionGithub} objects and save them in the hashmap
-     * 
+     *  
      * @return { void } 
      */
     public build(): void {
@@ -105,9 +89,9 @@ export class ActionManager {
     }
 
     /**
-     * Map containing all {@link IActionGithub} registered during the process
+     * Map containing all {@link ActionGithub} registered during the process
      * 
-     * @returns { Map<string, IActionGithub> }
+     * @returns { Map<string, ActionGithub> }
      */
     public get registredAction(): Map<string, ActionGithub> {
         return this._registredAction;

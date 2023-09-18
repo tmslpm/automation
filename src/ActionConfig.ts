@@ -1,8 +1,8 @@
 export type ActionConfig = {
-    id: string,
-    name: string,
-    description: string,
-    trigger: string,
-    runOn: string,
-    nodeVersion: string
+    id: string | undefined,
+    name: string | undefined,
+    description: string | undefined,
+    trigger: string | undefined,
+    runOn: string | undefined,
+    nodeVersion: string | undefined
 }

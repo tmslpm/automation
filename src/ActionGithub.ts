@@ -14,6 +14,9 @@ export class ActionGithub {
 
     // id: string, name: string, description: string
     public constructor(actionConfig: ActionConfig) {
+        if (!actionConfig.id) {
+            throw new Error("missing unique identifier in task.json")
+        }
         this._id = actionConfig.id;
         this._config = actionConfig;
     }
@@ -64,6 +67,8 @@ export class ActionGithub {
             + `        run: |\n`
             + `          node src/tasks/${this.config.id}/entry.ts\n`;
     }
+
+    
 
     /** 
      * Getter `action.id`. 

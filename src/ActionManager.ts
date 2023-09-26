@@ -73,7 +73,7 @@ export class ActionManager {
             let hasActionFile = true;
             let actionConfig = {} as ActionConfig;
 
-            // check is a file and is json file
+            // check is a json file
             if (!currentPath.endsWith("action.json")) {
                 hasActionFile = false;
                 console.error(">> Invalid path recevied, reason: path not ends with `action.json`, path: ", currentPath)

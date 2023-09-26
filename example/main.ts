@@ -14,4 +14,6 @@ console.log("start main", __dirname, __filename);
 
     // (3) generate action
     manager.generateAction();
+
+    // dsqmlf,qlksflksn,flknsx
 })();

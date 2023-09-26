@@ -33,7 +33,7 @@ Example of automation code.
 ``` 
 
 -----------------
-<pre align=center>↑↑↑ <a href="#automation" title="click to scroll up" alt="click to scroll up">BACK TO TOP</a> ↑↑↑</pre>
+<pre align=center>↑↑↑ <a href="#automation-" title="click to scroll up" alt="click to scroll up">BACK TO TOP</a> ↑↑↑</pre>
 
 ### About billing for GitHub Actions
 
@@ -53,4 +53,4 @@ Example of automation code.
 </div>
 
 -----------------
-<pre align=center>↑↑↑ <a href="#automation" title="click to scroll up" alt="click to scroll up">BACK TO TOP</a> ↑↑↑</pre>
+<pre align=center>↑↑↑ <a href="#automation-" title="click to scroll up" alt="click to scroll up">BACK TO TOP</a> ↑↑↑</pre>

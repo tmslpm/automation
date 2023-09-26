@@ -13,7 +13,5 @@ console.log("start main", __dirname, __filename);
     //manager.register(pathResolve(__dirname, "./actions/bad.action.json"));
 
     // (3) generate action
-    manager.generateAction();
-
-    // dsqmlf,qlksflksn,flknsx
+    manager.generateAction(); 
 })();
